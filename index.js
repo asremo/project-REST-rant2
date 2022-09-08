@@ -7,6 +7,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 
 app.use('/places', require('./controllers/places'))
 
+// when you call the render method, it knows to look for a 'views' folder
 app.get('/', (req, res) => {
     res.render('home')
 })
@@ -16,7 +17,7 @@ app.get('/', (req, res) => {
 // make sure this route is at the bottom OR 
 // it will override your other pages
 app.get('*', (req, res) => {
-    res.status(404).send('<h1>404 Page</h1>')
+    res.render('error404')
 })
 
 app.listen(process.env.PORT)

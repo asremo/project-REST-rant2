@@ -9,7 +9,7 @@ function home () {
           </main>
       </Def>
     )
-  }
+}
   
 
 module.exports = home
