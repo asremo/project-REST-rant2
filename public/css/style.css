@@ -1,5 +1,10 @@
 h1 {
     text-align: center;
     color: cornflowerblue;
-  }
+}
   
+img {
+
+    max-width: 650px;
+    max-height: 650px;
+}
