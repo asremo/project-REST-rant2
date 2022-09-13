@@ -6,7 +6,7 @@ function new_form () {
         <Def>
             <main>
                 <h1>Add a New Place</h1>
-                {/* metho is the HTTP verb and action is the destination path */}
+                {/* method is the HTTP verb and action is the destination path */}
                 <form method="POST" action="/places">
                     {/* JSX requires the class attribute to be written as className */}
                     <div className='form-group'>

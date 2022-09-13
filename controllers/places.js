@@ -43,8 +43,11 @@ router.get('/:id', (req, res) => {
         res.render('error404')
     }
     else {
-        // { place: places[id] } passes the data in places[id] to your view
-        res.render('places/show', { place: places[id] })
+        // 1. { place: places[id] } passes the data in places[id] to your view.
+        // 2. to add the href value for the edit & delete button in show page, we need to
+        // have access to the array index number by passing it into the view when
+        // we call res.render() from the places.js controller -> id in the end of {place}
+        res.render('places/show', { place: places[id], id })
     }
 })
 
@@ -52,7 +55,21 @@ router.put('/:id', (req, res) => {
     res.send('PUT /places/:id stub')
 })
 
+router.delete('/:id', (req, res) => {
+    res.send('DELETE /places/:id stub')
+  })
+  
+router.get('/:id/edit', (req, res) => {
+res.send('GET edit form stub')
+})
 
+router.post('/:id/rant', (req, res) => {
+res.send('GET /places/:id/rant stub')
+})
+
+router.delete('/:id/rant/:rantId', (req, res) => {
+    res.send('GET /places/:id/rant/:rantId stub')
+})
 
 
 
