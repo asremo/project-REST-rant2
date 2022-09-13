@@ -31,8 +31,28 @@ router.get('/new', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
+    // make sure id is a number. if not, go to 404 page
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    // make sure it is a valid array index. 
+    // checks for accuracy of the places array at that index
+    // if invalid, go to 404 page
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+        // { place: places[id] } passes the data in places[id] to your view
+        res.render('places/show', { place: places[id] })
+    }
+})
+
+router.put('/:id', (req, res) => {
     res.send('PUT /places/:id stub')
 })
+
+
 
 
 
