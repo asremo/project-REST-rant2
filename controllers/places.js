@@ -56,15 +56,31 @@ router.put('/:id', (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-    res.send('DELETE /places/:id stub')
-  })
+    // make sure id is a number. if not, go to 404 page
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    // make sure it is a valid array index. 
+    // checks for accuracy of the places array at that index
+    // if invalid, go to 404 page
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+        // splice actually gets delete route to actually delete
+        // the item from the array
+        places.splice(id, 1)
+        res.redirect('/places')
+    }
+})
   
 router.get('/:id/edit', (req, res) => {
-res.send('GET edit form stub')
+    res.send('GET edit form stub')
 })
 
 router.post('/:id/rant', (req, res) => {
-res.send('GET /places/:id/rant stub')
+    res.send('GET /places/:id/rant stub')
 })
 
 router.delete('/:id/rant/:rantId', (req, res) => {
