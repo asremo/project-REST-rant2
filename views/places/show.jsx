@@ -71,11 +71,11 @@ function show (data) {
                             Serving {data.place.cuisines}
                         </h4>
                         <br />
-                        <a href={`/places/${data.id}/edit`} className='btn btn-warning'>
+                        <a href={`/places/${data.place.id}/edit`} className='btn btn-warning'>
                             Edit
                         </a>
                         {/* method is the HTTP verb and action is the destination path */}
-                        <form method="POST" action={`/places/${data.id}?_method=DELETE`}>
+                        <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}>
                             <button type="submit" className='btn btn-danger'>
                             Delete
                             </button>

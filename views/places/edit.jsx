@@ -6,7 +6,7 @@ function edit_form (data) {
         <Def>
             <main>
                 <h1>Edit Place</h1>
-                <form method="POST" action={`/places/${data.id}?_method=PUT`}>
+                <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
                     <div className='row'>
                         {/* JSX requires the class attribute to be written as className */}
                         <div className='form-group col-sm-6'>
@@ -49,8 +49,24 @@ function edit_form (data) {
                                 value={data.place.state} 
                             />
                         </div>
+                        <div className='form-group col-sm-6'>
+                            <label htmlFor='founded'>Founded</label>
+                            <input className='form-control'
+                                id="founded"
+                                name="founded"
+                                value={data.place.founded}
+                            />
+                        </div>
+                        <div className='form-group col-sm-6'>
+                            <label htmlFor='cuisines'>Cuisines</label>
+                            <input className='form-control'
+                                id="cuisines"
+                                name="cuisines"
+                                value={data.place.cuisines}
+                            />
+                        </div>
                     </div>
-                    <div className='form-group'>
+                    {/* <div className='form-group'>
                         <label htmlFor='cuisines'>Cuisines</label>
                         <input 
                             className='form-control' 
@@ -59,7 +75,7 @@ function edit_form (data) {
                             value={data.place.cuisines} 
                             required 
                         />
-                    </div>
+                    </div> */}
                     <input 
                         className='btn btn-primary' 
                         type="submit" 
