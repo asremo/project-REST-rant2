@@ -18,6 +18,12 @@ router.get('/', (req, res) => {
     res.render('places/index', { places })
 })
 
+// router.post('/', (req, res) => {
+//     res.render('places')
+// })
+
+// make sure /new route is above /:id route so the 
+// new part of /places/new is not interpreted as an id
 router.get('/new', (req, res) => {
     res.render('places/new')
 })
@@ -25,5 +31,7 @@ router.get('/new', (req, res) => {
 router.get('/:id', (req, res) => {
     res.send('PUT /places/:id stub')
 })
+
+
 
 module.exports = router
