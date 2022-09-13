@@ -1,4 +1,6 @@
 // connect to Mongoose after doing npm install mongoose
+
+require('dotenv').config()
 const mongoose = require('mongoose')
 
 mongoose.connect(process.env.MONGO_URI, {
