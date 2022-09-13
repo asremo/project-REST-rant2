@@ -8,6 +8,8 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public')) //static files don't dynamically change
+app.use(express.urlencoded({ extended: true })) //body parser tool that decrypts data, included with Express
+
 
 
 // **Controllers & Routes**

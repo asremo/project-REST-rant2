@@ -18,9 +18,11 @@ router.get('/', (req, res) => {
     res.render('places/index', { places })
 })
 
-// router.post('/', (req, res) => {
-//     res.render('places')
-// })
+router.post('/', (req, res) => {
+    console.log(req.body)
+    res.send('POST /places')
+})
+  
 
 // make sure /new route is above /:id route so the 
 // new part of /places/new is not interpreted as an id
