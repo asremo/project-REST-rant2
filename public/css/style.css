@@ -2,6 +2,10 @@ h1 {
     text-align: center;
     color: cornflowerblue;
 }
+
+.color {
+    color: lightblue;
+}
   
 img {
 
@@ -37,11 +41,11 @@ nav a:hover {
 body {
     background-color: lightblue;
     text-align: center;
-  }
+}
   
-  main {
+main {
     margin-right: 20px;
     margin-left: 20px;
     background-color: white;
-  }
+}
   
