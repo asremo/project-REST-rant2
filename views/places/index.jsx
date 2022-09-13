@@ -8,8 +8,8 @@ function index (data) {
         return (
             <div className='col-sm-6'>
                 <h2>
-                    {/* clicks link and goes directly to show page */}
-                    <a href={`/places/${index}`} >
+                    {/* clicks link and goes directly to show page using the Mongo id */}
+                    <a href={`/places/${place.id}`} >
                         {place.name}
                     </a>
                 </h2>
