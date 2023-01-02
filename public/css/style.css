@@ -1,50 +1,47 @@
+nav {
+  background-color: cornflowerblue;
+  padding: 10px;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+nav li {
+  display: inline;
+  margin-right: 25px;
+}
+nav a {
+  color: white;
+  font-size: 1.5em;
+}
+nav a:hover {
+  color: pink;
+  text-decoration: none;
+}
+
 h1 {
-    text-align: center;
-    color: cornflowerblue;
+  text-align: center;
+  color: cornflowerblue;
 }
 
 .color {
-    color: lightblue;
+  color: lightblue;
 }
-  
+
 img {
-    max-width: 650px;
-    max-height: 650px;
-}
-
-nav {
-    background-color: cornflowerblue;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 25px;
-}
-
-nav a {
-    color: white;
-    font-size: 1.5em;
-}
-
-nav a:hover {
-    color: pink;
-    text-decoration: none;
+  max-width: 650px;
+  max-height: 650px;
 }
 
 body {
-    background-color: lightblue;
-    text-align: center;
+  background-color: lightblue;
+  text-align: center;
 }
-  
+
 main {
-    margin-right: 20px;
-    margin-left: 20px;
-    background-color: white;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: white;
 }
-  
+
+/*# sourceMappingURL=style.css.map */
