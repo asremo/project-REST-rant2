@@ -1,0 +1,25 @@
+@import "config";
+
+nav {
+    background-color: cornflowerblue;
+    padding: 10px;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+    }
+
+    li {
+        display: inline;
+        margin-right: 25px;
+    }
+    
+    a {
+        color: white;
+        font-size: 1.5em;
+        &:hover {
+            color: pink;
+            text-decoration: none;
+        }
+    }
+}
