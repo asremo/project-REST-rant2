@@ -1,7 +1,8 @@
+@import "utilities";
 @import "config";
 
 nav {
-    background-color: cornflowerblue;
+    @include set-bg($background-color_1);
     padding: 10px;
 
     ul {
