@@ -15,10 +15,10 @@ nav {
     }
     
     a {
-        color: white;
+        color: $color_3;
         font-size: 1.5em;
         &:hover {
-            color: pink;
+            color: $color_4;
             text-decoration: none;
         }
     }
