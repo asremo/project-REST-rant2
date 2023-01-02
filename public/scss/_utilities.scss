@@ -1,0 +1,4 @@
+// set bg code
+@mixin set-bg($color) {
+    background-color: $color;
+  }
