@@ -1,0 +1,30 @@
+//import
+@import "config";
+
+
+
+h1 {
+    text-align: center;
+    color: $color_1;
+}
+
+.color {
+	color: $color_2;
+}
+
+img {
+    max-width: 650px;
+    max-height: 650px;
+}
+
+body {
+    background-color: $backgound-color_2;
+    text-align: center;
+}
+  
+main {
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: $background-color_3;
+}
+  
